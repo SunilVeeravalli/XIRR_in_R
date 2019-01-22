@@ -4,13 +4,13 @@ XIRR calculation
 Introduction
 ============
 
-XIRR stands for Extended Internal Rate of Return and is used to calculate returns on investments done at different time periods which need not be periodic.
+XIRR stands for Extended Internal Rate of Return and is used to calculate return on investments done at different time periods which need not be periodic.
 
-XIRR gives the annualized returns of a portfolio that include all cash flows.
+XIRR gives the annualized return of a portfolio that include all cash flows.
 
 XIRR is a financial function available in Excel. The drawback with Excel's XIRR is that it will show the 0% XIRR as a default for negative returns.
 
-To use in R, I have written this code which calculates XIRR for both positive and negative returns.
+For use in R, I have written this code which calculates XIRR for both positive and negative returns.
 
 I hope you find my xirr function useful.
 
@@ -79,7 +79,7 @@ xirr(positive.returns)
 
     ## [1] "XIRR is 17.425%"
 
-That is, the return of our portfolio is **17.425%**.
+That is, the return of our portfolio is **17.425%** per annum.
 
 Example: Negative returns
 -------------------------
@@ -118,4 +118,4 @@ xirr(negative.returns)
 
     ## [1] "XIRR is -79.845%"
 
-That is, the return of our portfolio is **-79.845%**.
+That is, the return of our portfolio is **-79.845%** per annum.
