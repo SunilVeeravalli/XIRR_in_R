@@ -74,6 +74,6 @@ xirr <- function(dataset) {
 }
 
 
-xirr(dataset)
+
 
 
