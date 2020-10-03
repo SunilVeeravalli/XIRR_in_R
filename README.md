@@ -1,5 +1,5 @@
-XIRR calculation
-================
+XIRR calculation (in R)
+=======================
 
 Introduction
 ============
@@ -10,7 +10,7 @@ XIRR gives the annualized return of a portfolio that include all cash flows.
 
 XIRR is a financial function available in Excel. The drawback with Excel's XIRR is that it will show the 0% XIRR as a default for negative returns.
 
-For use in R, I have written this code which calculates XIRR for both positive and negative returns.
+For use in R, I have written this code which calculates XIRR for both positive and negative returns. For the XIRR calculation in Python, please check my repository: **XIRR_in_Pyton**
 
 I hope you find my xirr function useful.
 
