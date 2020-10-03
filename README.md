@@ -4,13 +4,13 @@ XIRR calculation (in R)
 Introduction
 ============
 
-XIRR stands for Extended Internal Rate of Return and is used to calculate return on investments done at different time periods which need not be periodic.
+XIRR stands for Extended Internal Rate of Return and is used to calculate return on investments made at different time periods which need not be periodic.
 
 XIRR gives the annualized return of a portfolio that include all cash flows.
 
 XIRR is a financial function available in Excel. The drawback with Excel's XIRR is that it will show the 0% XIRR as a default for negative returns.
 
-For use in R, I have written this code which calculates XIRR for both positive and negative returns. For the XIRR calculation in Python, please check my repository: **XIRR_in_Pyton**
+For use in R, I have written this code which calculates XIRR for both positive and negative returns. For the XIRR calculation in Python, please check my repository: [**XIRR_in_Pyton**](https://github.com/SunilVeeravalli/XIRR_in_Python)
 
 I hope you find my xirr function useful.
 
@@ -25,7 +25,7 @@ Data requirements
 
 Prepare your data in two columns:
 1. First column - dates
-2. Second column - amounts. The invested amount should be given a negative sign and the redemptions should be given a positive sign.
+2. Second column - amounts. The invested amount (debit) should be given a negative sign and the redemptions (credit) should be given a positive sign.
 
 Note: Please find the sample data provided in the repository
 
@@ -65,7 +65,7 @@ head(positive.returns)
     ## 5 30/01/1991   -850
     ## 6 03/05/1991  -3600
 
-Since the dates columns is character data type, change it to date data type.
+Since the dates column is character data type, change it to date data type.
 
 ``` r
 positive.returns$dates <- as.Date(positive.returns$dates, format = "%d/%m/%Y")
@@ -104,7 +104,7 @@ head(negative.returns)
     ## 5 13/01/1991  -2200
     ## 6 16/01/1991   9800
 
-Since the dates columns is character data type, change it to date data type.
+Since the dates column is character data type, change it to date data type.
 
 ``` r
 negative.returns$dates <- as.Date(negative.returns$dates, format = "%d/%m/%Y")
